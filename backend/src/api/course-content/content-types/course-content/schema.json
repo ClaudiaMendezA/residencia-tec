@@ -4,7 +4,8 @@
   "info": {
     "singularName": "course-content",
     "pluralName": "course-contents",
-    "displayName": "CourseContent"
+    "displayName": "CourseContent",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "content": {
       "type": "richtext"
