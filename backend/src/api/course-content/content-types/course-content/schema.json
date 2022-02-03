@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "course_contents",
+  "info": {
+    "singularName": "course-content",
+    "pluralName": "course-contents",
+    "displayName": "CourseContent"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}
