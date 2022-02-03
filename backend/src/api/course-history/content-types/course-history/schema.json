@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "course_histories",
+  "info": {
+    "singularName": "course-history",
+    "pluralName": "course-histories",
+    "displayName": "CourseHistory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "course_content": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::course-content.course-content"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer"
+    }
+  }
+}
