@@ -30,6 +30,12 @@
       "relation": "manyToMany",
       "target": "api::course-category.course-category",
       "inversedBy": "courses"
+    },
+    "course_contents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::course-content.course-content",
+      "mappedBy": "course"
     }
   }
 }

@@ -23,7 +23,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::course.course",
-      "inversedBy": "course_categories"
+      "mappedBy": "course_categories"
     }
   }
 }
