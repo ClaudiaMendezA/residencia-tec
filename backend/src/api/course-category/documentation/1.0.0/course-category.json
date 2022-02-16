@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/courses": {
+    "/course-categories": {
       "get": {
         "responses": {
           "200": {
@@ -25,10 +25,7 @@
                               "description": {
                                 "type": "string"
                               },
-                              "active": {
-                                "type": "boolean"
-                              },
-                              "course_categories": {
+                              "courses": {
                                 "type": "object",
                                 "properties": {
                                   "data": {
@@ -48,7 +45,10 @@
                                             "description": {
                                               "type": "string"
                                             },
-                                            "courses": {
+                                            "active": {
+                                              "type": "boolean"
+                                            },
+                                            "course_categories": {
                                               "type": "object",
                                               "properties": {
                                                 "data": {
@@ -68,10 +68,7 @@
                                                           "description": {
                                                             "type": "string"
                                                           },
-                                                          "active": {
-                                                            "type": "boolean"
-                                                          },
-                                                          "course_categories": {
+                                                          "courses": {
                                                             "type": "object",
                                                             "properties": {
                                                               "data": {
@@ -674,7 +671,7 @@
           }
         },
         "tags": [
-          "Course"
+          "Course-category"
         ],
         "parameters": [
           {
@@ -782,10 +779,7 @@
                             "description": {
                               "type": "string"
                             },
-                            "active": {
-                              "type": "boolean"
-                            },
-                            "course_categories": {
+                            "courses": {
                               "type": "object",
                               "properties": {
                                 "data": {
@@ -805,7 +799,10 @@
                                           "description": {
                                             "type": "string"
                                           },
-                                          "courses": {
+                                          "active": {
+                                            "type": "boolean"
+                                          },
+                                          "course_categories": {
                                             "type": "object",
                                             "properties": {
                                               "data": {
@@ -825,10 +822,7 @@
                                                         "description": {
                                                           "type": "string"
                                                         },
-                                                        "active": {
-                                                          "type": "boolean"
-                                                        },
-                                                        "course_categories": {
+                                                        "courses": {
                                                           "type": "object",
                                                           "properties": {
                                                             "data": {
@@ -1410,7 +1404,7 @@
           }
         },
         "tags": [
-          "Course"
+          "Course-category"
         ],
         "parameters": [],
         "requestBody": {
@@ -1424,12 +1418,6 @@
                     "properties": {
                       "title": {
                         "type": "string"
-                      },
-                      "description": {
-                        "type": "string"
-                      },
-                      "active": {
-                        "type": "boolean"
                       }
                     }
                   }
@@ -1440,7 +1428,7 @@
         }
       }
     },
-    "/courses/{id}": {
+    "/course-categories/{id}": {
       "get": {
         "responses": {
           "200": {
@@ -1463,10 +1451,7 @@
                             "description": {
                               "type": "string"
                             },
-                            "active": {
-                              "type": "boolean"
-                            },
-                            "course_categories": {
+                            "courses": {
                               "type": "object",
                               "properties": {
                                 "data": {
@@ -1486,7 +1471,10 @@
                                           "description": {
                                             "type": "string"
                                           },
-                                          "courses": {
+                                          "active": {
+                                            "type": "boolean"
+                                          },
+                                          "course_categories": {
                                             "type": "object",
                                             "properties": {
                                               "data": {
@@ -1506,10 +1494,7 @@
                                                         "description": {
                                                           "type": "string"
                                                         },
-                                                        "active": {
-                                                          "type": "boolean"
-                                                        },
-                                                        "course_categories": {
+                                                        "courses": {
                                                           "type": "object",
                                                           "properties": {
                                                             "data": {
@@ -2091,7 +2076,7 @@
           }
         },
         "tags": [
-          "Course"
+          "Course-category"
         ],
         "parameters": [
           {
@@ -2129,10 +2114,7 @@
                             "description": {
                               "type": "string"
                             },
-                            "active": {
-                              "type": "boolean"
-                            },
-                            "course_categories": {
+                            "courses": {
                               "type": "object",
                               "properties": {
                                 "data": {
@@ -2152,7 +2134,10 @@
                                           "description": {
                                             "type": "string"
                                           },
-                                          "courses": {
+                                          "active": {
+                                            "type": "boolean"
+                                          },
+                                          "course_categories": {
                                             "type": "object",
                                             "properties": {
                                               "data": {
@@ -2172,10 +2157,7 @@
                                                         "description": {
                                                           "type": "string"
                                                         },
-                                                        "active": {
-                                                          "type": "boolean"
-                                                        },
-                                                        "course_categories": {
+                                                        "courses": {
                                                           "type": "object",
                                                           "properties": {
                                                             "data": {
@@ -2757,7 +2739,7 @@
           }
         },
         "tags": [
-          "Course"
+          "Course-category"
         ],
         "parameters": [
           {
@@ -2786,10 +2768,7 @@
                       "description": {
                         "type": "string"
                       },
-                      "active": {
-                        "type": "boolean"
-                      },
-                      "course_categories": {
+                      "courses": {
                         "type": "array",
                         "items": {
                           "oneOf": [
@@ -3004,7 +2983,7 @@
           }
         },
         "tags": [
-          "Course"
+          "Course-category"
         ],
         "parameters": [
           {

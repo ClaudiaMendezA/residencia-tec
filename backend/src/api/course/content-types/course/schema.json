@@ -24,6 +24,12 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "course_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course-category.course-category",
+      "inversedBy": "courses"
     }
   }
 }
