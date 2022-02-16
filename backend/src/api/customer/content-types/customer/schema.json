@@ -21,6 +21,12 @@
       "required": true,
       "minLength": 6,
       "private": true
+    },
+    "customer_role": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer-role.customer-role",
+      "inversedBy": "customers"
     }
   }
 }
