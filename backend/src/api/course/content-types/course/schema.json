@@ -31,11 +31,11 @@
       "target": "api::course-category.course-category",
       "inversedBy": "courses"
     },
-    "course_contents": {
+    "course_groups": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::course-content.course-content",
-      "mappedBy": "course"
+      "relation": "manyToMany",
+      "target": "api::course-group.course-group",
+      "mappedBy": "courses"
     }
   }
 }

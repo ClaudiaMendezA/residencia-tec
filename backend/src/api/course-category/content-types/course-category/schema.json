@@ -24,6 +24,14 @@
       "relation": "manyToMany",
       "target": "api::course.course",
       "mappedBy": "course_categories"
+    },
+    "cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

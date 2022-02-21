@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "course_groups",
+  "info": {
+    "singularName": "course-group",
+    "pluralName": "course-groups",
+    "displayName": "CourseGroup",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course.course",
+      "inversedBy": "course_groups"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
