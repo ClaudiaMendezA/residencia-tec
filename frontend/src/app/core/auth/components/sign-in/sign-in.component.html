@@ -1,0 +1,16 @@
+<form [formGroup]="signInForm" class="text-center" (submit)="signIn()">
+  <h1>Iniciar Sesión</h1>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Direccion de correo electronico</label>
+    <input type="email" class="form-control" [formControlName]="'identifier'">
+    <small id="emailHelp" class="form-text text-muted">Contacte con su ATP si no sabe cuales son sus credenciales de acceso.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Contraseña</label>
+    <input type="password" class="form-control" [formControlName]="'password'">
+  </div>
+  <button type="submit" class="btn btn-primary">Entrar</button>
+</form>
+
+<br>
+<pre>{{ signInForm.value | json }}</pre>
