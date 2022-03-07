@@ -30,6 +30,12 @@
       "relation": "manyToMany",
       "target": "api::course-group.course-group",
       "mappedBy": "courses"
+    },
+    "course_chapters": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::course-chapter.course-chapter",
+      "mappedBy": "course"
     }
   }
 }
