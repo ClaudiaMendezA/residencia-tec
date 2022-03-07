@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { PublicLayoutComponent } from './layouts/public-layout/public-layout.component';
+import { UserLayoutComponent } from './layouts/user-layout/user-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PublicLayoutComponent
+    PublicLayoutComponent,
+    UserLayoutComponent
   ],
   imports: [
     BrowserModule,

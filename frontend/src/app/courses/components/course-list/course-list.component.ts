@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { pluck } from 'rxjs';
 import { UserService } from 'src/app/core/user/user.service';
 import { environment } from 'src/environments/environment';
+import { Course } from '../../models/course.model';
 
 @Component({
   selector: 'app-course-list',
@@ -9,7 +11,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./course-list.component.scss']
 })
 export class CourseListComponent implements OnInit {
-  courses: any[] = [];
+  courses: Course[] = [];
 
   constructor(
     private _httpClient: HttpClient,
@@ -17,8 +19,8 @@ export class CourseListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this._httpClient.get(`courses`).subscribe((courses: any[]) => {
-      this.courses = courses;
+    this._httpClient.get(`courses`).pipe(pluck('data')).subscribe((courses: any[]) => {
+      this.courses = courses.map(course => course.attributes);
     })
   }
 

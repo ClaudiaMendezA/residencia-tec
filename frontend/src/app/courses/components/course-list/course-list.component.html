@@ -1,2 +1,5 @@
 <h1>Lista de cursos</h1>
-<pre>{{ courses | json }}</pre>
+<app-course-item
+  *ngFor="let course of courses"
+  [course]="course"
+></app-course-item>

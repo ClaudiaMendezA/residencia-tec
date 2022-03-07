@@ -4,6 +4,7 @@ import { SignInComponent } from './core/auth/components/sign-in/sign-in.componen
 import { AuthGuard } from './core/auth/guards/auth.guard';
 import { NoAuthGuard } from './core/auth/guards/noAuth.guard';
 import { PublicLayoutComponent } from './layouts/public-layout/public-layout.component';
+import { UserLayoutComponent } from './layouts/user-layout/user-layout.component';
 
 const routes: Routes = [
   {path: '', pathMatch : 'full', redirectTo: 'courses'},
@@ -31,7 +32,7 @@ const routes: Routes = [
     path: '',
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
-    component: PublicLayoutComponent,
+    component: UserLayoutComponent,
     data: {
         layout: 'empty'
     },
