@@ -20,7 +20,7 @@ export class CourseListComponent implements OnInit {
 
   ngOnInit(): void {
     this._httpClient.get(`courses`).pipe(pluck('data')).subscribe((courses: any[]) => {
-      this.courses = courses.map(course => course.attributes);
+      this.courses = courses.map(course => ({id: course.id, ...course.attributes}));
     })
   }
 

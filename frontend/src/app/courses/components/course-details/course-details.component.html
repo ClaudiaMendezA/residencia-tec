@@ -1,0 +1,22 @@
+<ng-container *ngIf="(course$ | async) as course; else loading">
+  <header class="text-center">
+    <h1>{{ course.title }}</h1>
+    <p>{{ course.description }}</p>
+  </header>
+
+  <div class="chapters mt-5">
+    <div class="chapter my-3" *ngFor="let chapter of course.course_chapters">
+      <app-chapter-item [chapter]="chapter"></app-chapter-item>
+    </div>
+
+    <div class="card" *ngIf="course.course_chapters.length === 0">
+      <div class="card-body">
+        Este curso aun no tiene capitulos.
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #loading>
+  Cargando...
+</ng-template>
