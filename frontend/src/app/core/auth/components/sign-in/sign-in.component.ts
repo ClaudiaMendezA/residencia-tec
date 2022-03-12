@@ -10,6 +10,7 @@ import { AuthService } from '../../auth.service';
 })
 export class SignInComponent implements OnInit {
   signInForm: FormGroup;
+  signInError: string;
 
   constructor(
     private _authService: AuthService,
@@ -28,11 +29,19 @@ export class SignInComponent implements OnInit {
   }
 
   signIn() {
-    this._authService.signIn(this.signInForm.value).subscribe(() => {
-      const redirectURL = this._activatedRoute.snapshot.queryParamMap.get('redirectURL') || '/signed-in-redirect';
-
-      // Navigate to the redirect url
-      this._router.navigateByUrl(redirectURL);
-    });
+    this._authService.signIn(this.signInForm.value).subscribe(
+      () => {
+        const redirectURL = this._activatedRoute.snapshot.queryParamMap.get('redirectURL') || '/signed-in-redirect';
+  
+        // Navigate to the redirect url
+        this._router.navigateByUrl(redirectURL);
+      },
+      error => {
+        this.signInError = error;
+        if (error) {
+          alert('Hubo un error al iniciar sesión, contacte a su ATP');
+        }
+      }
+    );
   }
 }
