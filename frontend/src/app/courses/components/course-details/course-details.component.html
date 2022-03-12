@@ -1,3 +1,10 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/">Inicio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Curso</li>
+  </ol>
+</nav>
+
 <ng-container *ngIf="(course$ | async) as course; else loading">
   <header class="text-center">
     <h1>{{ course.title }}</h1>
