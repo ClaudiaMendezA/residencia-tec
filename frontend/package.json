@@ -1,12 +1,18 @@
 {
   "name": "frontend",
   "version": "0.0.0",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "server": "node server.js",
+    "postinstall": "ng build -c production"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +27,9 @@
     "@angular/router": "~13.1.0",
     "@ng-bootstrap/ng-bootstrap": "^11.0.0",
     "bootstrap": "^4.6.0",
+    "express": "^4.17.3",
     "ngx-markdown": "^13.1.0",
+    "path": "^0.12.7",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
