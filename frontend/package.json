@@ -9,10 +9,10 @@
     "ng": "ng",
     "develop": "ng serve --open",
     "start": "node server.js",
-    "build": "npx ng build -c production",
+    "build": "ng build -c production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "postinstall": "npm run build"
+    "postinstall": "npm install --global @angular/cli && npm run build"
   },
   "private": true,
   "dependencies": {
