@@ -6,9 +6,9 @@
   "scripts": {
     "install:frontend": "cd frontend && npm install",
     "install:backend": "cd backend && npm install",
-    "start": "cd backend && npm start",
+    "start": "cd $SUBFOLDER && npm start",
     "start:frontend": "cd frontend && npm start",
-    "build:frontend": "cd frontend && npm run build",
+    "start:backend": "cd backend && npm start",
     "postinstall": "npm run install:frontend && npm run install:backend"
   },
   "repository": {

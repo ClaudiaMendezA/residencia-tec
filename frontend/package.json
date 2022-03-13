@@ -7,7 +7,8 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "develop": "ng serve --open",
+    "start": "npm run server",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
