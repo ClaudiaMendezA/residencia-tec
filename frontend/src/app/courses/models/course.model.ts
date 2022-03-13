@@ -12,4 +12,5 @@ export interface CourseChapter {
   id: string;
   title: string;
   content: string;
+  seen?: boolean;
 }

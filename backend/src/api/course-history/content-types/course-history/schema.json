@@ -20,7 +20,8 @@
     "course_chapter": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::course-chapter.course-chapter"
+      "target": "api::course-chapter.course-chapter",
+      "inversedBy": "course_history"
     }
   }
 }

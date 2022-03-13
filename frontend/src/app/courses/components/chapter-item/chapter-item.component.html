@@ -2,7 +2,10 @@
   <div class="card-body">
     <a class="d-flex align-self-stretch" [routerLink]="['chapter', chapter.id]">
       <i class="bi bi-file-earmark-text"></i>
-      <span class="flex-grow-1 px-2">{{ chapter.title }}</span>
+      <div class="flex-grow-1 px-2">
+        <span>{{ chapter.title }}</span>
+        <span class="badge badge-secondary mx-2">{{ chapter.seen ? 'visto' : '' }}</span>
+      </div>
       <i class="bi bi-arrow-right"></i>
     </a>
   </div>

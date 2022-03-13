@@ -7,7 +7,16 @@
 </nav>
 
 <ng-container *ngIf="chapter">
+  <h1 class="display-4 my-5">{{ chapter.title }}</h1>
+
   <markdown ngPreserveWhitespaces>
     {{ chapter.content }}
   </markdown>
+
+  <div class="check my-5">
+    <button type="button" class="btn btn-primary btn-lg btn-block" (click)="checkCourse()" [disabled]="!this.userId">
+      <i class="fas fa-check"></i>
+      Marcar curso como visto
+    </button>
+  </div>
 </ng-container>

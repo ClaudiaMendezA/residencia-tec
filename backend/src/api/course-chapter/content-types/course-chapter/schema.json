@@ -24,6 +24,12 @@
       "relation": "manyToOne",
       "target": "api::course.course",
       "inversedBy": "course_chapters"
+    },
+    "course_history": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::course-history.course-history",
+      "inversedBy": "course_chapter"
     }
   }
 }

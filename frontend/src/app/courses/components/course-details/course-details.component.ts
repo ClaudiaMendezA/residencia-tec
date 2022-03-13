@@ -22,13 +22,13 @@ export class CourseDetailsComponent implements OnInit {
   getCourse(id: string) {
     // @ts-ignore
     this.course$ = this._httpClient
-      .get(`courses/${id}?populate=course_chapters`)
+      .get(`courses/${id}?populate=course_chapters,course_chapters.course_history`)
       .pipe(
         pluck('data'),
         map((course: any) => {
           const attributes = course.attributes;
           const course_chapters = attributes.course_chapters?.data.map(
-            (chapter) => ({ id: chapter.id, ...chapter.attributes })
+            (chapter) => ({ id: chapter.id, ...chapter.attributes, seen: !!chapter.attributes.course_history.data })
           );
           return { ...course.attributes, id: course.id, course_chapters };
         })
