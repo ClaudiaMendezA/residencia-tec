@@ -11,8 +11,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "server": "node server.js",
-    "postinstall": "ng build -c production"
+    "server": "npx ng build -c production && node server.js"
   },
   "private": true,
   "dependencies": {

@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  backendApi: 'http://localhost:1337/api',
+  backendApi: 'https://atp-panel.herokuapp.com/api',
 };
