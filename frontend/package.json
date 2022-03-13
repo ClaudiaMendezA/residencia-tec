@@ -12,7 +12,7 @@
     "build": "ng build -c production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "postinstall": "npm install --global @angular/cli && npm run build"
+    "postinstall": "npm install -g @angular/cli @angular/compiler-cli typescript && npm run build"
   },
   "private": true,
   "dependencies": {
