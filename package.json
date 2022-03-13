@@ -1,0 +1,24 @@
+{
+  "name": "residencia-tec",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && npm install",
+    "start": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "build:frontend": "cd frontend && npm run build",
+    "postinstall": "npm run install:frontend && npm run install:backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClaudiaMendezA/residencia-tec.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClaudiaMendezA/residencia-tec/issues"
+  },
+  "homepage": "https://github.com/ClaudiaMendezA/residencia-tec#readme"
+}
