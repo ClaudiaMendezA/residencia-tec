@@ -8,11 +8,11 @@
   "scripts": {
     "ng": "ng",
     "develop": "ng serve --open",
-    "start": "npm run server",
-    "build": "ng build",
+    "start": "node server.js",
+    "build": "npx ng build -c production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "server": "npx ng build -c production && node server.js"
+    "postinstall": "npm run build"
   },
   "private": true,
   "dependencies": {
